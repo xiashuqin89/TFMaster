@@ -1,0 +1,25 @@
+---
+type: Block
+name: MySql
+group: storage
+fields:
+  - key: id
+  - key: name
+  - key: engine_version
+  - key: volume_size
+  - key: availability_zone
+  - key: vpc_id
+---
+type: ResourceMapping
+name: MySqlMapping
+block: MySql
+specs:
+  tencentcloud:
+    resource: tencentcloud_mysql_instance
+    specs:
+      id: values.id
+      name: values.instance_name
+      engine_version: values.engine_version
+      vpc_id: values.vpc_id
+      availability_zone: values.availability_zone
+      volume_size: values.volume_size

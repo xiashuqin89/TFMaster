@@ -1,0 +1,17 @@
+.topology {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden
+}
+.topology #container .diff {
+    border: 2px dashed red !important;
+}
+.node-data-table-class .diff-row {
+    background-color: #FFDDDD !important;
+}
+.node-detail .node-form .bk-form-item .bk-label-text {
+    padding-left: 10px;
+    border-left: solid #3c96ff 4px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}

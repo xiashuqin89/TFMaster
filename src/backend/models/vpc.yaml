@@ -1,0 +1,21 @@
+---
+type: Block
+name: VPC
+group: Network
+fields:
+  - key: id
+  - key: name
+  - key: region
+  - key: cidr_block
+---
+type: ResourceMapping
+name: VPCMapping
+block: VPC
+specs:
+  tencentcloud:
+    resource: tencentcloud_vpc
+    specs:
+      id: values.id
+      name: name
+      region: values.bandwidth
+      cidr_block: values.cidr_block

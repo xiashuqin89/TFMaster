@@ -1,0 +1,94 @@
+.panoramic .canvas {
+    display: flex;
+    min-height: calc(100vh - 60px);
+    width: 100%;
+    background-size: cover;
+}
+.panoramic .canvas .main {
+    width: 100%
+}
+.panoramic .canvas .menu {
+    position: fixed;
+    width: 290px;
+    height: calc(100vh - 120px);
+    border: 1px solid #eee;
+    bottom: 36px;
+    right: 28px;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    .header {
+        border-bottom: dashed 1px #eee;
+        display: flex;
+        padding: 10px;
+        .title {
+            color: rgb(99, 101, 110);
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+    .main {
+        padding-left: 20px;
+        padding-right: 20px;
+        display: block;
+        .label {
+            font-size: 14px;
+            color: #63656e;
+        }
+    }
+    .footer {
+        text-align: right;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+.panoramic .custom-add-button {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    top: 50px;
+    left: 28px;
+    z-index: 1000;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.panoramic .custom-add-button:hover {
+    transition: border .28s cubic-bezier(.4,0,.2,1),box-shadow .28s cubic-bezier(.4,0,.2,1);
+    box-shadow: none;
+}
+.panoramic .bk-dropdown-menu .bk-dropdown-content {
+    top: 90px !important;
+    left: 28px !important;
+    border-radius: 5px;
+}
+.panoramic .mini-map {
+    background: #f4f5f9;
+    border-radius: 2px;
+    bottom: 20px;
+    box-shadow: 0 0 6px 0 #3132381a;
+    position: fixed;
+    left: 36px;
+    user-select: none;
+    z-index: 1000;
+    .main {
+        padding: 10px;
+        height: 50px;
+        width: 220px;
+        display: block;
+    }
+}
+.panoramic .exception-wrap-item {
+    margin-top: 15%;
+    height: 420px;
+    padding-top: 22px;
+    .bk-exception-text {
+        width: 420px;
+    }
+}
+.panoramic .exception-wrap-item .exception-image {
+    width: 240px;
+    height: 120px;
+}

@@ -1,0 +1,35 @@
+---
+type: Block
+name: VM
+group: compute
+fields:
+  - key: id
+  - key: name
+  - key: hostname
+  - key: region
+  - key: image_id
+  - key: instance_type
+  - key: system_disk_size
+  - key: private_ip
+  - key: vpc_id
+  - key: subnet_id
+  - key: public_ip
+    desc: Vitual Machine Public IPV4
+---
+type: ResourceMapping
+name: VMMapping
+block: VM
+specs:
+  tencentcloud:
+    resource: tencentcloud_instance
+    specs:
+      id: values.id
+      hostname: values.hostname
+      name: name
+      image_id: values.image_id
+      instance_type: values.instance_type
+      system_disk_size: values.system_disk_size
+      private_ip: values.private_ip
+      public_ip: values.public_ip
+      vpc_id: values.vpc_id
+      subnet_id: values.subnet_id

@@ -1,0 +1,22 @@
+---
+type: Block
+name: Subnet
+group: Network
+fields:
+  - key: id
+  - key: name
+  - key: region
+  - key: zone
+  - key: cidr_block
+---
+type: ResourceMapping
+name: SubnetMapping
+block: Subnet
+specs:
+  tencentcloud:
+    resource: tencentcloud_subnet
+    specs:
+      id: values.id
+      name: name
+      zone: values.availability_zone
+      cidr_block: values.cidr_block

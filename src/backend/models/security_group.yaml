@@ -1,0 +1,22 @@
+---
+type: Block
+name: SecurityGroup
+group: Network
+fields:
+  - key: id
+  - key: name
+  - key: ingress
+  - key: egress
+---
+type: ResourceMapping
+name: SecurityGroupMapping
+block: SecurityGroup
+specs:
+  tencentcloud:
+    resource: tencentcloud_security_group_lite_rule
+    specs:
+      id: values.security_group_id
+      name: name
+      ingress: values.ingress
+      egress: values.egress
+      vpc_id: values.vpc_id

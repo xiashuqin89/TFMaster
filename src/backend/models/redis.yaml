@@ -1,0 +1,26 @@
+---
+type: Block
+name: Redis
+group: storage
+fields:
+  - key: id
+  - key: name
+  - key: port
+  - key: vpc_id
+  - key: availability_zone
+  - key: mem_size
+---
+type: ResourceMapping
+name: RedisMapping
+block: Redis
+specs:
+  tencentcloud:
+    resource: tencentcloud_redis_instance
+    specs:
+      id: values.id
+      name: values.name
+      port: values.port
+      vpc_id: values.vpc_id
+      subnet_id: values.subnet_id
+      availability_zone: values.availability_zone
+      mem_size: values.mem_size

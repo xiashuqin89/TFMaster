@@ -1,0 +1,27 @@
+version: "1"
+services:
+  backend:
+    build:
+      context: ./src/backend
+      dockerfile: Dockerfile
+    environment:
+      STORAGE_URL: ''
+      STORAGE_CODE: ''
+      STORAGE_OPERATOR: ''
+      SALT_KEY: ''
+    restart: always
+    ports:
+      - "80:18083"
+  topo:
+    build:
+      context: ./src/topo
+      dockerfile: Dockerfile
+    environment:
+      BK_AJAX_URL_PREFIX: ''
+      BK_USER_INFO_URL: ''
+    restart: always
+    depends_on:
+      - backend
+    command: python src/
+    ports:
+      - "80:5000"

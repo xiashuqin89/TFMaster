@@ -1,0 +1,19 @@
+---
+type: Block
+name: EIP
+group: Network
+fields:
+  - key: id
+  - key: public_ip
+  - key: name
+---
+type: ResourceMapping
+name: EIPMapping
+block: EIP
+specs:
+  tencentcloud:
+    resource: tencentcloud_eip
+    specs:
+      id: values.id
+      name: values.name
+      public_ip: values.public_ip

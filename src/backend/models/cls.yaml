@@ -1,0 +1,17 @@
+---
+type: Block
+name: LOG
+group: Storage
+fields:
+  - key: id
+  - key: name
+---
+type: ResourceMapping
+name: LOGMapping
+block: LOG
+specs:
+  tencentcloud:
+    resource: tencentcloud_cls_logset
+    specs:
+      id: values.id
+      name: name

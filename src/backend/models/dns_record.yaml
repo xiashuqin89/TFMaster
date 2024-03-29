@@ -1,0 +1,25 @@
+---
+type: Block
+name: DNSRecord
+group: Network
+fields:
+  - key: id
+  - key: sub_domain
+  - key: domain
+  - key: value
+  - key: ttl
+  - key: record_type
+---
+type: ResourceMapping
+name: DNSRecordMapping
+block: DNSRecord
+specs:
+  tencentcloud:
+    resource: tencentcloud_dnspod_record
+    specs:
+      id: values.id
+      sub_domain: values.sub_domain
+      domain: values.domain
+      value: values.value
+      ttl: values.ttl
+      record_type: values.record_type

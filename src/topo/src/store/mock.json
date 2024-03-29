@@ -1,0 +1,627 @@
+[
+  {
+    "id": "lb",
+    "group": "lb",
+    "count": 1,
+    "data": [
+      {
+        "id": "lb-xxxxxx",
+        "name": "xxxx",
+        "vip": [
+          "1.1.1.1"
+        ],
+        "network_type": "OPEN",
+        "region": "ap-beijing",
+        "out_bandwidth": 1000,
+        "diff": null
+      }
+    ],
+    "changes": []
+  },
+  {
+    "id": "cdn",
+    "group": "cdn",
+    "count": 1,
+    "data": [
+      {
+        "id": "cdn-xxxxxx",
+        "name": "xxxx",
+        "domain": "www.xxx.com",
+        "network_type": "OPEN",
+        "region": "ap-beijing",
+        "out_bandwidth": 1000,
+        "diff": null
+      }
+    ],
+    "changes": []
+  },
+  {
+    "id": "log",
+    "group": "log",
+    "count": 1,
+    "data": [
+      {
+        "id": "xxxx-8561-4629-ac93-xxx",
+        "name": "xxxx",
+        "diff": null
+      }
+    ],
+    "changes": []
+  },
+  {
+    "id": "dns",
+    "group": "dns",
+    "count": 2,
+    "data": [
+      {
+        "id": "blueking.com",
+        "remark": "blueking.com",
+        "domain": "blueking.com",
+        "diff": {
+          "state": 3,
+          "before": {
+            "create_time": "2023-07-26 13:05:23",
+            "domain": "blueking.com",
+            "group_id": null,
+            "id": "blueking.com",
+            "is_mark": "no",
+            "remark": "blueking.com",
+            "status": null
+          },
+          "after": null,
+          "diff": {
+            "removed": {
+              "create_time": "2023-07-26 13:05:23",
+              "domain": "blueking.com",
+              "group_id": null,
+              "id": "blueking.com",
+              "is_mark": "no",
+              "remark": "blueking.com",
+              "status": null
+            },
+            "added": null
+          },
+          "diff_show": "  \n\n<Diff removed={'create_time': '2023-07-26 13:05:23', 'domain': 'blueking.com', 'group_id': None, 'id': 'blueking.com', 'is_mark': 'no', 'remark': 'blueking.com', 'status': None} added=None >\n"
+        }
+      },
+      {
+        "id": "xxx.games",
+        "remark": null,
+        "domain": "xxx.games",
+        "diff": null
+      }
+    ],
+    "changes": [
+      {
+        "id": "blueking.com",
+        "remark": "blueking.com",
+        "domain": "blueking.com",
+        "diff": {
+          "state": 3,
+          "before": {
+            "create_time": "2023-07-26 13:05:23",
+            "domain": "blueking.com",
+            "group_id": null,
+            "id": "blueking.com",
+            "is_mark": "no",
+            "remark": "blueking.com",
+            "status": null
+          },
+          "after": null,
+          "diff": {
+            "removed": {
+              "create_time": "2023-07-26 13:05:23",
+              "domain": "blueking.com",
+              "group_id": null,
+              "id": "blueking.com",
+              "is_mark": "no",
+              "remark": "blueking.com",
+              "status": null
+            },
+            "added": null
+          },
+          "diff_show": "  \n\n<Diff removed={'create_time': '2023-07-26 13:05:23', 'domain': 'blueking.com', 'group_id': None, 'id': 'blueking.com', 'is_mark': 'no', 'remark': 'blueking.com', 'status': None} added=None >\n"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ip",
+    "group": "eip",
+    "count": 1,
+    "data": [
+      {
+        "id": "eip-xxxxx",
+        "public_ip": "1.0.0.0",
+        "name": "xx-xx-xx-1",
+        "diff": null
+      }
+    ],
+    "changes": []
+  },
+  {
+    "id": "vm",
+    "group": "vm",
+    "count": 2,
+    "data": [
+      {
+        "id": "ins-xxxx",
+        "name": "instance_1",
+        "hostname": null,
+        "region": "ap-beijing",
+        "image_id": "img-xxx",
+        "instance_type": "S5.MEDIUM4",
+        "system_disk_size": 50,
+        "private_ip": "10.0.0.1",
+        "vpc_id": "vpc-xxx",
+        "subnet_id": "subnet-xxx",
+        "public_ip": null,
+        "diff": null
+      },
+      {
+        "id": "ins-xxx",
+        "name": "instance_2",
+        "hostname": null,
+        "region": "ap-beijing",
+        "image_id": "img-xxx",
+        "instance_type": "S5.MEDIUM4",
+        "system_disk_size": 50,
+        "private_ip": "10.0.0.2",
+        "vpc_id": "vpc-xxx",
+        "subnet_id": "subnet-xxx",
+        "public_ip": null,
+        "diff": null
+      }
+    ],
+    "changes": []
+  },
+  {
+    "id": "nat",
+    "group": "nat",
+    "count": 2,
+    "data": [
+      {
+        "id": "nat-xxx",
+        "name": "xxx",
+        "bandwidth": 500,
+        "public_ip": [
+          "1.1.0.1"
+        ],
+        "diff": null
+      },
+      {
+        "id": "nat-bbb",
+        "name": "bbb",
+        "bandwidth": 500,
+        "public_ip": [
+          "1.1.0.1"
+        ],
+        "diff": null
+      }
+    ],
+    "changes": []
+  },
+  {
+    "id": "sg",
+    "group": "securitygroup",
+    "count": 2,
+    "data": [
+      {
+        "id": "sg-xxxx",
+        "name": "api_idip",
+        "ingress": [
+          "ACCEPT#bbb-xxxx#443#TCP",
+          "ACCEPT#xxxx-vvvv#443#TCP"
+        ],
+        "egress": [
+          "ACCEPT#0.0.0.0/0#ALL#ALL"
+        ],
+        "diff": null
+      },
+      {
+        "id": "sg-xxx",
+        "name": "xxx",
+        "ingress": [
+          "ACCEPT#0.0.0.0/0#ALL#ALL"
+        ],
+        "egress": [
+          "ACCEPT#0.0.0.0/0#ALL#ALL",
+          "ACCEPT##ALL#ALL"
+        ],
+        "diff": {
+          "state": 2,
+          "before": {
+            "egress": [
+              "ACCEPT#0.0.0.0/0#ALL#ALL",
+              "ACCEPT##ALL#ALL"
+            ],
+            "id": "sg-c3ot8vyw",
+            "ingress": [
+              "ACCEPT#0.0.0.0/0#ALL#ALL"
+            ],
+            "security_group_id": "sg-c3ot8vyw"
+          },
+          "after": {
+            "egress": [
+              "ACCEPT#0.0.0.0/0#ALL#ALL",
+              "ACCEPT##ALL#ALL"
+            ],
+            "id": "sg-xxx",
+            "ingress": [
+              "ACCEPT#1.1.1.1/0#ALL#ALL"
+            ],
+            "security_group_id": "sg-xxx"
+          },
+          "diff": {
+            "egress": [
+              "ACCEPT#0.0.0.0/0#ALL#ALL",
+              "ACCEPT##ALL#ALL"
+            ],
+            "id": "sg-xxx",
+            "ingress": [
+              "ACCEPT#1.1.1.1/0#ALL#ALL"
+            ],
+            "security_group_id": "sg-c3ot8vyw"
+          },
+          "diff_show": ""
+        }
+      }
+    ],
+    "changes": [
+      {
+        "id": "sg-xxx",
+        "name": "xxx",
+        "ingress": [
+          "ACCEPT#0.0.0.0/0#ALL#ALL"
+        ],
+        "egress": [
+          "ACCEPT#0.0.0.0/0#ALL#ALL",
+          "ACCEPT##ALL#ALL"
+        ],
+        "diff": {
+          "state": 2,
+          "before": {
+            "egress": [
+              "ACCEPT#0.0.0.0/0#ALL#ALL",
+              "ACCEPT##ALL#ALL"
+            ],
+            "id": "sg-c3ot8vyw",
+            "ingress": [
+              "ACCEPT#0.0.0.0/0#ALL#ALL"
+            ],
+            "security_group_id": "sg-c3ot8vyw"
+          },
+          "after": {
+            "egress": [
+              "ACCEPT#0.0.0.0/0#ALL#ALL",
+              "ACCEPT##ALL#ALL"
+            ],
+            "id": "sg-xxx",
+            "ingress": [
+              "ACCEPT#1.1.1.1/0#ALL#ALL"
+            ],
+            "security_group_id": "sg-xxx"
+          },
+          "diff": {
+            "egress": [
+              "ACCEPT#0.0.0.0/0#ALL#ALL",
+              "ACCEPT##ALL#ALL"
+            ],
+            "id": "sg-xxx",
+            "ingress": [
+              "ACCEPT#1.1.1.1/0#ALL#ALL"
+            ],
+            "security_group_id": "sg-c3ot8vyw"
+          },
+          "diff_show": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "subnet",
+    "group": "subnet",
+    "count": 6,
+    "data": [
+      {
+        "id": "subnet-xxx",
+        "name": "xx-xx-xx-1",
+        "region": "ap-xx",
+        "zone": "ap-xx-1",
+        "cidr_block": "1.1.1.0/1",
+        "diff": null
+      }
+    ],
+    "changes": []
+  },
+  {
+    "id": "vpc",
+    "group": "vpc",
+    "count": 2,
+    "data": [
+      {
+        "id": "vpc-xxx",
+        "name": "xx-xx-xx-xx",
+        "region": "ap-xxx",
+        "cidr_block": "1.1.1.1/1",
+        "diff": null
+      },
+      {
+        "id": "vpc-xxx",
+        "name": "xx-xx-xx",
+        "region": "ap-xxx",
+        "cidr_block": "1.1.1.1/1",
+        "diff": null
+      }
+    ],
+    "changes": []
+  },
+  {
+    "id": "bucket",
+    "group": "objectstorage",
+    "count": 2,
+    "data": [
+      {
+        "id": "xx-xx-xx",
+        "name": "xxx",
+        "addr": "xx-xx-xx",
+        "diff": null
+      },
+      {
+        "id": "vbb-bb-bb",
+        "name": "bb",
+        "addr": "bb-bb-bbb",
+        "diff": null
+      }
+    ],
+    "changes": []
+  },
+  {
+    "id": "db",
+    "group": "mysql",
+    "count": 1,
+    "data": [
+      {
+        "id": null,
+        "name": "tf-example-mysql",
+        "engine_version": "5.7",
+        "volume_size": 200,
+        "availability_zone": "na-siliconvalley-1",
+        "vpc_id": "vpc-22x7r8ex",
+        "diff": {
+          "state": 1,
+          "before": null,
+          "after": {
+            "auto_renew_flag": 0,
+            "availability_zone": null,
+            "charge_type": "POSTPAID",
+            "engine_version": "5.7",
+            "fast_upgrade": null,
+            "force_delete": false,
+            "instance_name": null,
+            "internet_service": 1,
+            "intranet_port": 12312,
+            "max_deay_time": null,
+            "mem_size": 8888,
+            "param_template_id": null,
+            "parameters": {
+              "character_set_server": "utf8",
+              "max_connections": "1000"
+            },
+            "pay_type": null,
+            "period": null,
+            "prepaid_period": 1,
+            "project_id": 0,
+            "root_password": null,
+            "second_slave_zone": null,
+            "security_groups": [
+              "sg-xxx"
+            ],
+            "slave_deploy_mode": 0,
+            "slave_sync_mode": 1,
+            "subnet_id": "subnet-bbbb",
+            "tags": {
+              "name": "null"
+            },
+            "upgrade_subversion": null,
+            "volume_size": 200,
+            "vpc_id": "vpc-xxx"
+          },
+          "diff": {
+            "removed": null,
+            "added": null
+          },
+          "diff_show": ""
+        }
+      }
+    ],
+    "changes": [
+      {
+        "id": null,
+        "name": "tf-example-mysql",
+        "engine_version": "5.7",
+        "volume_size": 200,
+        "availability_zone": "na-siliconvalley-1",
+        "vpc_id": "vpc-22x7r8ex",
+        "diff": {
+          "state": 1,
+          "before": null,
+          "after": {
+            "auto_renew_flag": 0,
+            "availability_zone": null,
+            "charge_type": "POSTPAID",
+            "engine_version": "5.7",
+            "fast_upgrade": null,
+            "force_delete": false,
+            "instance_name": null,
+            "internet_service": 1,
+            "intranet_port": 12312,
+            "max_deay_time": null,
+            "mem_size": 8888,
+            "param_template_id": null,
+            "parameters": {
+              "character_set_server": "utf8",
+              "max_connections": "1000"
+            },
+            "pay_type": null,
+            "period": null,
+            "prepaid_period": 1,
+            "project_id": 0,
+            "root_password": null,
+            "second_slave_zone": null,
+            "security_groups": [
+              "sg-xxx"
+            ],
+            "slave_deploy_mode": 0,
+            "slave_sync_mode": 1,
+            "subnet_id": "subnet-bbbb",
+            "tags": {
+              "name": "null"
+            },
+            "upgrade_subversion": null,
+            "volume_size": 200,
+            "vpc_id": "vpc-xxx"
+          },
+          "diff": {
+            "removed": null,
+            "added": null
+          },
+          "diff_show": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "cache",
+    "group": "redis",
+    "count": 1,
+    "data": [
+      {
+        "id": null,
+        "name": "xxxx",
+        "port": 6379,
+        "vpc_id": "vpc-xx",
+        "availability_zone": "xx-xx-1",
+        "mem_size": 8192,
+        "diff": {
+          "state": 1,
+          "before": null,
+          "after": {
+            "auto_renew_flag": 0,
+            "availability_zone": "xx-xx-1",
+            "charge_type": "POSTPAID",
+            "force_delete": null,
+            "mem_size": 44567,
+            "name": "xxx",
+            "no_auth": null,
+            "operation_network": null,
+            "params_template_id": null,
+            "password": "xxx",
+            "port": 6379,
+            "prepaid_period": null,
+            "project_id": 0,
+            "recycle": null,
+            "redis_replicas_num": 1,
+            "security_groups": null,
+            "subnet_id": "subnet-xxx",
+            "tags": null,
+            "type": null,
+            "type_id": null,
+            "vpc_id": "vpc-xxx"
+          },
+          "diff": {
+            "removed": null,
+            "added": {
+              "auto_renew_flag": 0,
+              "availability_zone": "xxx-xxx-1",
+              "charge_type": "POSTPAID",
+              "force_delete": null,
+              "mem_size": 45678,
+              "name": "xxx",
+              "no_auth": null,
+              "operation_network": null,
+              "params_template_id": null,
+              "password": "xxx",
+              "port": 6379,
+              "prepaid_period": null,
+              "project_id": 0,
+              "recycle": null,
+              "redis_replicas_num": 1,
+              "security_groups": null,
+              "subnet_id": "subnet-xxx",
+              "tags": null,
+              "type": null,
+              "type_id": null,
+              "vpc_id": "vpc-xxx"
+            }
+          },
+          "diff_show": ""
+        }
+      }
+    ],
+    "changes": [
+      {
+        "id": null,
+        "name": "xxxx",
+        "port": 6379,
+        "vpc_id": "vpc-xx",
+        "availability_zone": "xx-xx-1",
+        "mem_size": 8192,
+        "diff": {
+          "state": 1,
+          "before": null,
+          "after": {
+            "auto_renew_flag": 0,
+            "availability_zone": "xx-xx-1",
+            "charge_type": "POSTPAID",
+            "force_delete": null,
+            "mem_size": 44567,
+            "name": "xxx",
+            "no_auth": null,
+            "operation_network": null,
+            "params_template_id": null,
+            "password": "xxx",
+            "port": 6379,
+            "prepaid_period": null,
+            "project_id": 0,
+            "recycle": null,
+            "redis_replicas_num": 1,
+            "security_groups": null,
+            "subnet_id": "subnet-xxx",
+            "tags": null,
+            "type": null,
+            "type_id": null,
+            "vpc_id": "vpc-xxx"
+          },
+          "diff": {
+            "removed": null,
+            "added": {
+              "auto_renew_flag": 0,
+              "availability_zone": "xxx-xxx-1",
+              "charge_type": "POSTPAID",
+              "force_delete": null,
+              "mem_size": 45678,
+              "name": "xxx",
+              "no_auth": null,
+              "operation_network": null,
+              "params_template_id": null,
+              "password": "xxx",
+              "port": 6379,
+              "prepaid_period": null,
+              "project_id": 0,
+              "recycle": null,
+              "redis_replicas_num": 1,
+              "security_groups": null,
+              "subnet_id": "subnet-xxx",
+              "tags": null,
+              "type": null,
+              "type_id": null,
+              "vpc_id": "vpc-xxx"
+            }
+          },
+          "diff_show": ""
+        }
+      }
+    ]
+  }
+]

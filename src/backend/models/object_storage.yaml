@@ -1,0 +1,19 @@
+---
+type: Block
+name: ObjectStorage
+group: storage
+fields:
+  - key: id
+  - key: name
+  - key: addr
+---
+type: ResourceMapping
+name: ObjectStorageMapping
+block: ObjectStorage
+specs:
+  tencentcloud:
+    resource: tencentcloud_cos_bucket
+    specs:
+      id: values.id
+      name: name
+      addr: values.bucket

@@ -1,0 +1,21 @@
+---
+type: Block
+name: SSL
+group: Network
+fields:
+  - key: id
+  - key: name
+  - key: create_time
+  - key: end_time
+---
+type: ResourceMapping
+name: SSLMapping
+block: SSL
+specs:
+  tencentcloud:
+    resource: tencentcloud_ssl_certificate
+    specs:
+      id: values.id
+      name: name
+      create_time: values.create_time
+      end_time: values.end_time

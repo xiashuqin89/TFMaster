@@ -1,0 +1,28 @@
+---
+type: Block
+name: LB
+group: Network
+fields:
+  - key: id
+  - key: name
+  - key: vip
+  - key: vip_domain
+  - key: network_type
+  - key: region
+  - key: out_bandwidth
+    desc: Export BandWidth
+---
+type: ResourceMapping
+name: LBMapping
+block: LB
+specs:
+  tencentcloud:
+    resource: tencentcloud_clb_instance
+    specs:
+      id: values.id
+      name: name
+      vip: values.clb_vips
+      vip_domain: values.domain
+      network_type: values.network_type
+      region: values.target_region_info_region
+      out_bandwidth: values.internet_bandwidth_max_out

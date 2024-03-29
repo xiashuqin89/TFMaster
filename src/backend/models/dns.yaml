@@ -1,0 +1,19 @@
+---
+type: Block
+name: DNS
+group: Network
+fields:
+  - key: id
+  - key: remark
+  - key: domain
+---
+type: ResourceMapping
+name: DNSMapping
+block: DNS
+specs:
+  tencentcloud:
+    resource: tencentcloud_dnspod_domain_instance
+    specs:
+      id: values.id
+      remark: values.remark
+      domain: values.domain

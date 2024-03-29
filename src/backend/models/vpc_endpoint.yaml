@@ -1,0 +1,18 @@
+type: Block
+name: VPCEndPoint
+group: Network
+fields:
+  - key: id
+  - key: vpc_id
+  - key: state
+---
+type: ResourceMapping
+name: VPCEndPointMapping
+block: VPCEndPoint
+specs:
+  tencentcloud:
+    resource: tencentcloud_vpc_end_point
+    specs:
+      id: values.id
+      name: name
+      vpc_id: values.vpc_id

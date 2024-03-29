@@ -1,0 +1,21 @@
+---
+type: Block
+name: CDN
+group: Network
+fields:
+  - key: id
+  - key: name
+  - key: cname
+  - key: domain
+---
+type: ResourceMapping
+name: CDNMapping
+block: CDN
+specs:
+  tencentcloud:
+    resource: tencentcloud_cdn_domain
+    specs:
+      id: values.id
+      name: name
+      cname: values.cname
+      domain: values.domain

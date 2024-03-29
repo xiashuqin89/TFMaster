@@ -1,0 +1,21 @@
+---
+type: Block
+name: CAM
+group: Network
+fields:
+  - key: id
+  - key: name
+  - key: uid
+  - key: uin
+---
+type: ResourceMapping
+name: CAMMapping
+block: CAM
+specs:
+  tencentcloud:
+    resource: tencentcloud_cam_user
+    specs:
+      id: values.id
+      name: values.name
+      uid: values.uid
+      uin: values.uin

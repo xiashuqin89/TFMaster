@@ -1,0 +1,22 @@
+---
+type: ResourceMapping
+name: NatMapping
+block: NAT
+specs:
+  tencentcloud:
+    resource: tencentcloud_nat_gateway
+    specs:
+      id: values.id
+      name: name
+      bandwidth: values.bandwidth
+      public_ip: values.assigned_eip_set
+---
+type: Block
+name: NAT
+group: Network
+fields:
+  - key: id
+  - key: name
+  - key: bandwidth
+  - key: public_ip
+    desc: Nat Public IPV4

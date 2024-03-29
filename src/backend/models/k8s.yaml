@@ -1,0 +1,24 @@
+---
+type: Block
+name: Kubernetes
+group: compute
+fields:
+  - key: id
+  - key: name
+  - key: cluster_cidr
+  - key: vpc_id
+  - key: subnet_id
+    desc: Kubernetes Version
+---
+type: ResourceMapping
+name: KubernetesMapping
+block: Kubernetes
+specs:
+  tencentcloud:
+    resource: tencentcloud_kubernetes_cluster
+    specs:
+      id: values.id
+      name: name
+      cluster_cidr: values.cluster_cidr
+      vpc_id: values.vpc_id
+      subnet_id: values.subnet_id
